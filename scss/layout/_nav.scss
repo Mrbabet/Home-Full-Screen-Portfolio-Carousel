@@ -15,7 +15,9 @@ body.active {
   }
 }
 nav {
+  font-size: 15px;
   height: 88px;
+  text-transform: uppercase;
   .wrapper {
     position: relative;
     z-index: 10;

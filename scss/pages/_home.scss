@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@400;700&display=swap");
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
 main {
   .wrapper {
     color: white;
@@ -7,12 +12,68 @@ main {
   width: 100%;
   height: 100%;
 }
+.heading {
+  font-family: "Permanent Marker", cursive;
+  text-transform: uppercase;
+  padding-inline: 24px;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-inline: 64px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+
+  p {
+    padding-inline: 24px;
+  }
+  .plus-icon {
+    img {
+      padding-right: 24px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    p {
+      font-size: 1.125rem;
+      padding-inline: 64px;
+    }
+
+    @media screen and (min-width: 992px) {
+      p {
+        font-size: 1.125rem;
+        padding-inline: 64px;
+      }
+    }
+  }
+}
+.arrow-container {
+  width: 100%;
+  height: 100%;
+  img {
+    margin: 0 auto;
+  }
+}
 .arrow-left,
 .arrow-right {
-  display: flex;
-  height: 100%;
   width: 100%;
-  justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
 }
 .arrow-left {
   border-right: 1px solid white;
