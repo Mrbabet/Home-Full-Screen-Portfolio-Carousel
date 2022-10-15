@@ -1,0 +1,19 @@
+main {
+  .wrapper {
+    color: white;
+  }
+}
+.hero {
+  width: 100%;
+  height: 100%;
+}
+.arrow-left,
+.arrow-right {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+.arrow-left {
+  border-right: 1px solid white;
+}
