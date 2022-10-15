@@ -1,0 +1,235 @@
+body {
+  background-color: #050a18;
+}
+body.active {
+  overflow-y: hidden;
+}
+.logo {
+  width: 3vmax;
+  min-width: 30px;
+
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
+nav {
+  height: 88px;
+  .wrapper {
+    padding-inline: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.logo {
+  margin-right: auto;
+}
+.links {
+  display: none;
+  span {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33%;
+    border-left: 1px solid white;
+
+    gap: 1rem;
+  }
+}
+.sc-media {
+  display: none;
+  span {
+    color: white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 100%;
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+
+    border-left: 1px solid white;
+    gap: 1rem;
+  }
+  @media screen and (min-width: 992px) {
+    flex-basis: 15%;
+  }
+}
+.get-in-touch {
+  display: none;
+  span {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+
+    flex-basis: 15%;
+  }
+}
+
+.nav-menu {
+  flex-basis: calc(100% * 0.25);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid white;
+  padding-left: 1rem;
+  gap: 1rem;
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+  span {
+    text-transform: uppercase;
+  }
+  .burger-btn {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .burger-bar {
+      height: 3px;
+      width: 30px;
+      background-color: white;
+      position: relative;
+      z-index: -1;
+    }
+    .burger-bar::before,
+    .burger-bar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      z-index: -1;
+    }
+    .burger-bar:after {
+      transform: translateY(-6px);
+    }
+    .burger-bar::before {
+      transform: translateY(6px);
+    }
+  }
+}
+.menu-overlay {
+  background-color: #050a18;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-120%);
+  opacity: 0;
+  transition: 1s ease-in;
+
+  z-index: -10;
+  .container {
+    position: absolute;
+    margin-top: 7rem;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 36px;
+      }
+    }
+    .nav-sc-media {
+      display: flex;
+      gap: 1rem;
+      .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #3f475e;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 36px;
+      }
+    }
+  }
+}
+.menu-overlay.active {
+  background-color: #050a18;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  opacity: 1;
+  transform: translateY(0%);
+  .container {
+    margin-top: 7rem;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 36px;
+      }
+    }
+    .nav-sc-media {
+      display: flex;
+      gap: 1rem;
+      .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #3f475e;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 36px;
+      }
+    }
+  }
+}
